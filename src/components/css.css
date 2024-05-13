@@ -1,0 +1,364 @@
+@font-face {
+  font-family: "Iwona";
+  src: url("./IwonaCond-Regular.ttf");
+}
+#fit #menu__toggle {
+    display: none;;
+  }
+#fit #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+#fit #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+#fit #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+#fit #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+#fit .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+#fit .menu__btn > span,
+#fit .menu__btn > span::before,
+#fit .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+#fit .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+#fit .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+#fit .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+  }
+#fit .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+#fit .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+
+:root {
+  --color: rgb(0, 0, 0);
+}
+
+body {
+  margin: 0;
+  font-family: "Iwona", sans-serif;
+}
+
+#fit .parallax-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background-image: url(https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80);
+  background-position: center;
+  background-size: cover;
+  color: var(--color);
+  row-gap: 4rem;
+  text-align: center;
+}
+
+#fit .buffer {
+  width: 100%;
+  min-height: 60vh;
+  background-color: #333;
+  color: #ECEFF1;
+  display: flex;
+  min-height: 35vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  
+}
+
+#fit .parallax-container2 {
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding: 6rem 0;
+  background-image: url(https://images.unsplash.com/photo-1585424536945-26663ea69d52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80);
+  gap: 1.6em;
+}
+
+#fit h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Iwone";
+}
+#fit .text {
+  font-family: "Iwona";
+  font-size: 1.5em;
+}
+#fit p {
+  max-width: 52ch;
+  padding: 1em;
+  line-height: 1.5;
+
+  font-size: 1em;
+}
+#fit .menu__box a{
+    display: inline-block;
+  
+    border-radius: 0.3em;
+    background-color: #ECEFF1;
+    
+    color: black;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    
+}
+ 
+#fit .card_nomera a{
+  display: inline-block;
+  padding: 1em 3.5em;
+  border-radius: 0.3em;
+  background-color: black;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#fit .card a{
+  display: inline-block;
+  padding: 1em 3.5em;
+  border-radius: 0.3em;
+  background-color: black;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#fit .app-info{
+  width: 247px;
+}
+#fit h3 {
+  margin-top: 1em;
+  font-size: 2rem;
+  font-weight: 700;
+}
+#fit .card {
+  display: flex;
+  max-width: 320px;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 1rem;
+  border-radius: 0.5em;
+
+  background-color:  rgba(255, 255, 255, 0.534);
+  box-shadow: 0 29px 38px -15px rgb(0 0 0 / 43%);
+}
+#fit .card_nomera {
+    display: flex;
+    max-width: 320px;
+    flex-direction: column;
+    align-items: center;
+  
+    padding-bottom: 1rem;
+    border-radius: 0.5em;
+  
+    background-color: rgba(255, 255, 255, 0.534);
+    box-shadow: 0 29px 38px -15px rgb(0 0 0 / 43%);
+  }
+#fit .card-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 0.3em;
+  background-position: center;
+  background-size: cover;
+}
+
+#fit .card:nth-of-type(1) .card-img {
+  background-image: url(https://sportishka.com/uploads/posts/2022-11/1667488863_15-sportishka-com-p-kacheli-v-gorakh-vkontakte-15.jpg);
+}
+#fit .card:nth-of-type(2) .card-img {
+  background-image: url(https://images.squarespace-cdn.com/content/v1/58c9c6e69f74567f6f50dfba/1492627534459-VE284Q5V8O1MATL1F187/iStock-157615466.jpg);
+}
+
+#fit .card:nth-of-type(3) .card-img {
+  background-image: url(https://sportishka.com/uploads/posts/2021-12/1639469166_8-sportishka-com-p-parochka-na-snegokhode-sport-krasivo-foto-8.jpg)
+}
+
+#fit .card_nomera:nth-of-type(1) .card-img {
+    background-image: url(https://celes.club/uploads/posts/2021-12/1640814172_9-celes-club-p-turbaza-zimoi-priroda-krasivo-foto-11.jpg);
+ }
+  
+#fit .card_nomera:nth-of-type(2) .card-img {
+    background-image: url(https://avatars.mds.yandex.net/get-altay/200322/2a0000015b21820a58f7cb05e3dec3794603/XXL);
+}
+  
+#fit .card_nomera:nth-of-type(3) .card-img {
+    background-image: url(https://static.tildacdn.com/tild6135-6564-4132-a139-626266663738/bisikom_2.jpg)
+ }
+ *{
+    margin: 0; padding: 0;
+    border: 0; outline: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --theme-col: #353538;
+}
+#fit .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+#fit footer{
+    background-color: #fcfbfb;
+}
+
+#fit .footer-menu {
+  text-decoration: none;
+  color: #000000;
+  
+}
+#fit .f-item-con{
+    padding: 1.5rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 2rem;
+}
+@media (max-width: 760px){
+#fit .f-item-con{
+   width: 50%;
+   margin-bottom: 30px;
+   display: block;
+  }
+ }
+ @media (max-width: 566px){
+#fit .f-item-con{
+   display: block;
+   
+ }
+ }
+#fit footer .app-name{
+    color: rgb(0, 0, 0);
+    border-left: 4px solid var(--theme-col);
+    padding-left: 1.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+
+#fit .app-name .app-initial{
+    color: var(--theme-col);
+}
+#fit footer .app-info p{
+    color: rgb(0, 0, 0);
+    padding-left: 1.65rem;
+}
+
+#fit footer .footer-title{ 
+    font-size: 2rem;
+    line-height: 1.75rem;
+    color: rgb(0, 0, 0);
+    border-left: 4px solid var(--theme-col);
+    padding-left: 1.5rem;
+    height: fit-content;
+}
+#fit footer ul{ 
+    padding-left: 1.75rem;
+    color: rgb(0, 0, 0);
+    font-size: 0.875rem/* 14px */;
+    line-height: 1.25rem;
+    margin-top: .5rem;
+}
+#fit footer ul li{ 
+    margin: 1.25rem 0;
+    cursor: pointer;
+    color: #000000;
+    width: fit-content;
+    font-size: 1.5rem;
+}
+#fit footer ul li:hover{
+    color: rgb(53, 51, 51);
+}
+#fit footer .help-sec{
+    grid-column-start: 2;
+}
+#fit footer .cr-con{
+    background-color: #ffffff28;
+    color: rgb(0, 0, 0);
+    padding: 1rem 4rem;
+    text-align: center;
+}
+#fit .g-i-t{
+    display: grid;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#fit .g-i-t form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+#fit form .g-inp{
+    padding: .25rem .5rem;
+    font-size: 16px;
+}
+#fit .g-inp textarea{
+    height: 150px;
+}
+#fit .f-btn{
+    padding: .25rem 1rem;
+    background-color: var(--theme-col);
+    border-radius: .25rem;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}
